@@ -24,8 +24,7 @@
       turnImage: 'fold.png',  // The triangle-shaped fold image
       maxHeight: 400,         // The maximum height. Duh.
       startingWidth: 100,     // The height and width 
-      startingHeight: 100,    // with which to start (these should probably be camelCase, d'oh.)
-      autoCurl: false         // If this is set to true, the fold will curl/uncurl on mouseover/mouseout.
+      startingHeight: 100    // with which to start (these should probably be camelCase, d'oh.)
     };
  
     // Merge options with the defaults
@@ -66,29 +65,37 @@
         turn_wrapper.addClass('top-left');
         handle = 'se';
     }
-  
-    if (!options.autoCurl) {
-      // Hit 'em with the drag-stick because it ain't gonna curl itself!
-      turn_wrapper.resizable({
-        maxHeight: options.maxHeight, 
-        aspectRatio: true,
-        handles: handle
+    
+    //helper fn to peel out
+    function pullOut(){
+      turn_wrapper.stop().animate({
+        width: options.maxHeight,
+        height: options.maxHeight
       });
-    } else {  //autocurl true
-      turn_wrapper.hover(
-        function(){
-          turn_object.stop().animate({
-            width: options.maxHeight,
-            height: options.maxHeight
-          });
-        },
-        function(){
-          turn_object.stop().animate({
-            width: options.startingHeight,
-            height: options.startingHeight
-          });
-        }
-      );
+    }
+    
+    //helper fn to peel back
+    function pushBack(){
+      turn_wrapper.stop().animate({
+        width: options.startingWidth,
+        height: options.startingHeight
+      });
+    }
+    
+    switch (options.action) {
+      case 'click':
+        turn_wrapper.toggle(pullOut,pushBack);
+        turn_wrapper.css("cursor","pointer");
+      break;
+      case 'hover':
+        turn_wrapper.hover(pullOut,pushBack);
+      break;
+      default:
+        turn_wrapper.resizable({
+          maxHeight: options.maxHeight, 
+          aspectRatio: true,
+          handles: handle
+        });
     }
   };
 })(jQuery);
