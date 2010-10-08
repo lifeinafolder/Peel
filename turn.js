@@ -92,9 +92,11 @@
       break;
       default:
         turn_wrapper.resizable({
-          maxHeight: options.maxHeight, 
+          maxHeight: options.maxHeight,
           aspectRatio: true,
-          handles: handle
+          handles: handle,
+          minWidth:options.startingWidth,
+          minHeight:options.startingHeight
         });
     }
   };
