@@ -19,9 +19,8 @@
     options = options || {};
     
     // Default awesomeness
-    var defaults = {
-      directory: '.',         // The directory we're in
-      side: 'left',           // change me to "right" if you want rightness
+    var defaults = {      
+      side: 'top-left',           // change me to "right" if you want rightness
       turnImage: 'fold.png',  // The triangle-shaped fold image
       maxHeight: 400,         // The maximum height. Duh.
       startingWidth: 100,     // The height and width 
@@ -40,7 +39,7 @@
     );
     var turn_wrapper = $('#turn_wrapper');
     var turn_object = $('#turn_object');
-    turn_object.append('<img id="turn_fold" src="'+ (options.directory+'/'+options.turnImage) +'"/>');
+    turn_object.append('<img id="turn_fold" src="'+ options.turnImage +'"/>');
     
     // Set starting width and height
     turn_wrapper.css({
@@ -70,7 +69,7 @@
   
     if (!options.autoCurl) {
       // Hit 'em with the drag-stick because it ain't gonna curl itself!
-      turn_object.resizable({
+      turn_wrapper.resizable({
         maxHeight: options.maxHeight, 
         aspectRatio: true,
         handles: handle

@@ -1,6 +1,4 @@
 #turn_wrapper {
-	width: 80px;
-	height: 80px;
   position: absolute;
 }
 
@@ -9,8 +7,8 @@
 }
 
 #turn_hideme {
-	width: 85%;
-	height: 85%;
+	width: 80%;
+	height: 80%;
 	overflow: hidden;
   position:absolute;
 }
@@ -22,7 +20,8 @@
 	position: relative;
 }
 
-#turn_wrapper.top-right{
+/* CSS top-right */
+#turn_wrapper.top-right. .top-right #turn_hideme{
   top:0px;
   right:0px;
 }
@@ -31,16 +30,8 @@
   -moz-transform : rotate(90deg);
 }
 
-#turn_wrapper.bottom-left{
-  bottom:0px;
-  left:0px;
-}
-
-.bottom-left #turn_fold{
-  -moz-transform : rotate(270deg);
-}
-
-#turn_wrapper.bottom-right{
+/* CSS bottom-right */
+#turn_wrapper.bottom-right, .bottom-right #turn_hideme{
   bottom:0px;
   right:0px;
 }
@@ -49,6 +40,17 @@
   -moz-transform : rotate(180deg);
 }
 
+/* CSS bottom-left */
+#turn_wrapper.bottom-left, .bottom-left #turn_hideme{
+  bottom:0px;
+  left:0px;
+}
+
+.bottom-left #turn_fold{
+  -moz-transform : rotate(270deg);
+}
+
+/* CSS top-left */
 #turn_wrapper.top-left{
   top:0px;
   left:0px;
