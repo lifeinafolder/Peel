@@ -28,6 +28,7 @@
 
 .top-right #turn_fold{
   -moz-transform : rotate(90deg);
+  -webkit-transform : rotate(90deg);
 }
 
 /* CSS bottom-right */
@@ -38,6 +39,7 @@
 
 .bottom-right #turn_fold{
   -moz-transform : rotate(180deg);
+  -webkit-transform : rotate(180deg);
 }
 
 /* CSS bottom-left */
@@ -48,6 +50,7 @@
 
 .bottom-left #turn_fold{
   -moz-transform : rotate(270deg);
+   -webkit-transform : rotate(270deg);
 }
 
 /* CSS top-left */
