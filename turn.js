@@ -20,17 +20,17 @@
     
     // Default awesomeness
     var defaults = {      
-      side: 'top-left',           // change me to "right" if you want rightness
+      side: 'top-left',       // 'top-right','bottom-right','bottom-left'
       turnImage: 'fold.png',  // The triangle-shaped fold image
-      maxHeight: 400,         // The maximum height. Duh.
-      startingWidth: 100,     // The height and width 
-      startingHeight: 100    // with which to start (these should probably be camelCase, d'oh.)
+      maxHeight: 400,     // The maximum height. Duh.
+      startingWidth: 100,   // The height and width 
+      startingHeight: 100   // with which to start (these should probably be camelCase, d'oh.)
     };
  
     // Merge options with the defaults
     var options = $.extend(defaults, options);
        
-    // Rappin', I'm rappin' - I'm rap-rap-rappin'.
+    // Wrap the target with the necessary DOM structure
     $(this).wrap( '<div id="turn_wrapper">' +
         '<div id="turn_object">' +
         '<div id="turn_hideme">' +
