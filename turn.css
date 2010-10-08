@@ -21,7 +21,7 @@
 }
 
 /* CSS top-right */
-#turn_wrapper.top-right. .top-right #turn_hideme{
+#turn_wrapper.top-right, .top-right #turn_hideme{
   top:0px;
   right:0px;
 }
