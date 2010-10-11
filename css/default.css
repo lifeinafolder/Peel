@@ -6,9 +6,21 @@ body{
 
 h1{
   text-align:center;
+}
+
+h1,h2{
   color:#555;
 }
 
+ul{
+list-style:square;
+}
+
 ul li{
-  margin:10px;
+  margin:10px 0px;
+}
+
+pre.prettyprint{
+  background:#EEE;
+  padding:10px;
 }

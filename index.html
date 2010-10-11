@@ -20,6 +20,7 @@
       <p>Net Effect : This wont work in your shitty browsers! Boo! Hiss! </p>
     </li>
     <li>For all you lazy bums, I added "click" and "hover" actions to peel this page on its own.</li>
+    <li>You can only add 1 and only 1 peel per page. For the sake of the sanity of the author of the original plugin and myself, dont go crazy peeeeling everything.</li>
   </ul>
   <h2>Receipe</h2>
   <ul>
@@ -36,7 +37,7 @@
     <pre>
 &lt;link rel=&quot;stylesheet&quot; href=&quot;css/ui-lightness/jquery-ui-1.8.5.custom.css&quot;&gt;</pre>
     </li>
-    <li>Now that the base is ready, lets go ahead and add some peel curry.
+    <li>Now that the base is ready, lets go ahead and add some peel dressing.
     <pre>
 &lt;script src=&quot;js/turn.js&quot;&gt;&lt;/script&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;css/turn.css&quot;&gt;</pre>
@@ -46,10 +47,11 @@
 $(document).ready(function(){
   $('#target').fold({
     side:'bottom-left', //['top-left','top-right','bottom-left','bottom-right] Default: 'top-left'
-    action:'click'    // ['click','hover'] Default : 'drag'
+    action:'click',    // ['click','hover'] Default : 'drag'
+    startingWidth:40,   // starting width and height of the peel over image
+    startingHeight:40   // default: 100px
   });
-});
-      </pre>
+});</pre>
     </li>
   </ul>
   <h2>Any doubts ?</h2>
@@ -57,7 +59,7 @@ $(document).ready(function(){
     <li> Which make of the JQuery sauce ?
       <p>Grab the latest available. The newer the better!</p>
     </li>
-    <li> Where to put the base element ?
+    <li> Where to put the base element ?      
       <p>The plugin wraps the element to peel with an "absolute" positioned element. So it will take a corner as per the closest ancestor which is "absolute" or "relative" positioned.</p>
     </li>
   </ul>
@@ -71,6 +73,7 @@ $(document).ready(function(){
   $(document).ready(function(){
     $('pre').addClass('prettyprint');
     prettyPrint();
+    
     $('#target').fold({
       side:'top-right',
       action:'click'
