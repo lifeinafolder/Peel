@@ -1,0 +1,14 @@
+body{
+  margin:0;
+  padding:10px;
+  font-family: Arial,Verdana,Helvetica,sans-serif;
+}
+
+h1{
+  text-align:center;
+  color:#555;
+}
+
+ul li{
+  margin:10px;
+}
