@@ -26,9 +26,9 @@
        
     // Wrap the target with the necessary DOM structure
     $(this).wrap( '<div id="turn_wrapper">' +
-        '<div id="turn_object">' +
-        '<div id="turn_hideme">' +
-        '</div></div></div>'
+      '<div id="turn_object">' +
+      '<div id="turn_hideme">' +
+      '</div></div></div>'
     );
     var turn_wrapper = $('#turn_wrapper');
     var turn_object = $('#turn_object');
