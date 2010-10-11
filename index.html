@@ -3,28 +3,76 @@
 <head>
   <link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.5.custom.css">
   <link rel="stylesheet" href="css/turn.css">
+  <link rel="stylesheet" href="css/prettify.css">
+  <link rel="stylesheet" href="css/default.css">
 </head>
 <body>
+  <img id="target" src="images/code.png">
   <h1>Peel this page! You heard me, peel it, just like an orange</h1>
-  <p></p>
-  <h1>The inside truth:</h1>
+  <h2>The inside truth:</h2>
   <ul>
     <li>This is a JQuery Plugin. Nuff Said!</li>
-    <li>Have you seen JQuery UI. Its awesome and this plugin is awesome. We go in pairs.</li>
-    <li>I like CSS3. Hence, just one image and the awesome CSS3 Transform : Rotate</li>
+    <li>Have you seen JQuery UI ? Its awesome and this plugin is awesome. We go in pairs.</li>
+    <li>Its inspired/based upon the super <a href="http://elliottkember.com/sexy_curls.html">sexy curl</a> plugin by <a href="http://twitter.com/elliottkember">Elliott Kember</a></li>
+    <li>The original plugin didn't allow moving the peel effect to corners other than  the "top-left" and "top-right". This one does!</li>
+    <li>
+      <p>I heart <a href="http://www.css3.info/">CSS3</a>. Hence, This plugin uses just one image and the awesome <a href="https://developer.mozilla.org/en/CSS/-moz-transform">CSS3 Transform : Rotate</a></p>
+      <p>Net Effect : This wont work in your shitty browsers! Boo! Hiss! </p>
+    </li>
+    <li>For all you lazy bums, I added "click" and "hover" actions to peel this page on its own.</li>
   </ul>
-  <div id="test" style="position:relative;top:50px; left:250px;width:400px;height:400px;border:1px solid black;">
-    <img id="target" src="images/code.png">
-  </div>
+  <h2>Receipe</h2>
+  <ul>
+    <li>First, take a HTML container with a target element like:
+    
+    </li>
+    <li> Add some JQuery and the JQuery UI :
+      <pre>&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;!window.jQuery &amp;&amp; document.write('&lt;script src=&quot;js/jquery-1.4.2.min.js&quot;&gt;&lt;\/script&gt;')&lt;/script&gt;
+&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;!window.jQuery.ui &amp;&amp; document.write('&lt;script src=&quot;js/jquery-ui-1.8.5.custom.min.js&quot;&gt;&lt;\/script&gt;')&lt;/script&gt;</pre>
+    </li>
+    <li>To make JQuery UI edible, put some JQuery UI theme sauce :
+    <pre>
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/ui-lightness/jquery-ui-1.8.5.custom.css&quot;&gt;</pre>
+    </li>
+    <li>Now that the base is ready, lets go ahead and add some peel curry.
+    <pre>
+&lt;script src=&quot;js/turn.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/turn.css&quot;&gt;</pre>
+    </li>
+    <li> Finally, heat it once the pan is ready
+      <pre>
+$(document).ready(function(){
+  $('#target').fold({
+    side:'bottom-left', //['top-left','top-right','bottom-left','bottom-right] Default: 'top-left'
+    action:'click'    // ['click','hover'] Default : 'drag'
+  });
+});
+      </pre>
+    </li>
+  </ul>
+  <h2>Any doubts ?</h2>
+  <ul>
+    <li> Which make of the JQuery sauce ?
+      <p>Grab the latest available. The newer the better!</p>
+    </li>
+    <li> Where to put the base element ?
+      <p>The plugin wraps the element to peel with an "absolute" positioned element. So it will take a corner as per the closest ancestor which is "absolute" or "relative" positioned.</p>
+    </li>
+  </ul>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
   <script>!window.jQuery && document.write('<script src="js/jquery-1.4.2.min.js"><\/script>')</script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
   <script>!window.jQuery.ui && document.write('<script src="js/jquery-ui-1.8.5.custom.min.js"><\/script>')</script>
   <script src="js/turn.js"></script>
+  <script src="js/prettify.js"></script>
   <script type="text/javascript">
   $(document).ready(function(){
+    $('pre').addClass('prettyprint');
+    prettyPrint();
     $('#target').fold({
-      side:'bottom-left',
+      side:'top-right',
       action:'click'
     });
   });
