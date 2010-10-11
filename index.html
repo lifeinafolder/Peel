@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/default.css">
 </head>
 <body>
-  <img id="target" src="images/code.png">
+  <img id="target" src="images/code.png" style="position:absolute;bottom:0;"/>
   <h1>Peel this page! You heard me, peel it, just like an orange</h1>
   <h2>The inside truth:</h2>
   <ul>
@@ -50,6 +50,7 @@ $(document).ready(function(){
     action:'click',    // ['click','hover'] Default : 'drag'
     startingWidth:40,   // starting width and height of the peel over image
     startingHeight:40   // default: 100px
+    stick:true      // the peel now sticks and doesnt go out of the viewport when the page is scrolled
   });
 });</pre>
     </li>
@@ -75,8 +76,9 @@ $(document).ready(function(){
     prettyPrint();
     
     $('#target').fold({
-      side:'top-right',
-      action:'click'
+      side:'bottom-right',
+      action:'click',
+      floating:true
     });
   });
   </script>

@@ -40,6 +40,11 @@
       height: options.startingHeight
     });
 
+    //check if floating peel required
+    if( options.stick ){
+      turn_wrapper.css('position','fixed');
+    }
+
     // There are different CSS classes for different positions
     var handle;
     switch(options.side){
@@ -89,6 +94,8 @@
           maxHeight: options.maxHeight,
           aspectRatio: true,
           handles: handle,
+          knobHandles: true,
+          dragHandle:false,
           minWidth:options.startingWidth,
           minHeight:options.startingHeight
         });
