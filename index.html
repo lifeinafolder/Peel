@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<script src="js/jquery-1.4.2.min.js"></script>
+<script src="js/jquery-ui-1.8.5.custom.min.js"></script>
+<script src="js/turn.js"></script>
+<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.5.custom.css">
+<link rel="stylesheet" href="css/turn.css">
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#target').fold({
+    side:'bottom-right',
+    action:'click'
+  });
+});
+</script>
+<h1 style="text-align: center;">Demo.</h1>
+<div id="test" style="position:relative;top:50px; left:250px;width:400px;height:400px;border:1px solid black;">
+  <img id="target" src="images/code.png">
+</div>
