@@ -26,6 +26,12 @@
   right:0px;
 }
 
+.top-right #turn_hideme img{
+  position: absolute;
+  top:0px;
+  right:0px;
+}
+
 .top-right #turn_fold{
   -moz-transform : rotate(90deg);
   -webkit-transform : rotate(90deg);
@@ -37,6 +43,12 @@
   right:0px;
 }
 
+.bottom-right #turn_hideme img{
+  position: absolute;
+  bottom:0px;
+  right:0px;
+}
+
 .bottom-right #turn_fold{
   -moz-transform : rotate(180deg);
   -webkit-transform : rotate(180deg);
@@ -44,6 +56,12 @@
 
 /* CSS bottom-left */
 #turn_wrapper.bottom-left, .bottom-left #turn_hideme{
+  bottom:0px;
+  left:0px;
+}
+
+.bottom-left #turn_hideme img{
+  position: absolute;
   bottom:0px;
   left:0px;
 }

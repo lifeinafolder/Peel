@@ -9,21 +9,21 @@
     if ( $.browser.msie && parseInt($.browser.version,10) < 7 ){
       this.remove(); return true;
     }
-  
+
     options = options || {};
-    
+
     // Default awesomeness
-    var defaults = {      
+    var defaults = {
       side: 'top-left',       // 'top-right','bottom-right','bottom-left'
       turnImage: 'images/fold.png',  // The triangle-shaped fold image
       maxHeight: 400,     // The maximum height. Duh.
-      startingWidth: 100,   // The height and width 
+      startingWidth: 100,   // The height and width
       startingHeight: 100   // with which to start (these should probably be camelCase, d'oh.)
     };
- 
+
     // Merge options with the defaults
     var options = $.extend(defaults, options);
-       
+
     // Wrap the target with the necessary DOM structure
     $(this).wrap( '<div id="turn_wrapper">' +
       '<div id="turn_object">' +
@@ -33,13 +33,13 @@
     var turn_wrapper = $('#turn_wrapper');
     var turn_object = $('#turn_object');
     turn_object.append('<img id="turn_fold" src="'+ options.turnImage +'"/>');
-    
+
     // Set starting width and height
     turn_wrapper.css({
       width: options.startingWidth,
       height: options.startingHeight
     });
-    
+
     // There are different CSS classes for different positions
     var handle;
     switch(options.side){
@@ -59,7 +59,7 @@
         turn_wrapper.addClass('top-left');
         handle = 'se';
     }
-    
+
     //helper fn to peel out
     function pullOut(){
       turn_wrapper.stop().animate({
@@ -67,7 +67,7 @@
         height: options.maxHeight
       });
     }
-    
+
     //helper fn to peel back
     function pushBack(){
       turn_wrapper.stop().animate({
@@ -75,7 +75,7 @@
         height: options.startingHeight
       });
     }
-    
+
     switch (options.action) {
       case 'click':
         turn_wrapper.toggle(pullOut,pushBack);
