@@ -16,10 +16,7 @@
     <li>Have you seen <a href="http://jqueryui.com/"><span class="highlight">JQuery UI</span></a> ? Its awesome and this plugin is awesome. <span class="focus">We go in pairs</span>.</li>
     <li>Its inspired/based upon the super <a href="http://elliottkember.com/sexy_curls.html">sexy curl</a> plugin by <a href="http://twitter.com/elliottkember">Elliott Kember</a></li>
     <li>The original plugin did not allow moving the peel effect to corners like the "bottom-left" and "bottom-right". This one does!</li>
-    <li>
-      <p>It uses the wonderful <a href="https://developer.mozilla.org/en/CSS/-moz-transform"><span class="highlight">CSS3 Transform : Rotate</span></a>. Hence, We just require one image.</p>
-      <p>Net Effect : This wont work in your shitty browsers! Boo! Hiss! </p>
-    </li>
+    <li>It uses the wonderful <a href="https://developer.mozilla.org/en/CSS/-moz-transform"><span class="highlight">CSS3 Transform : Rotate</span></a>. Hence, it requires just one image and doesn't like your old browsers.</li>
     <li>For all you lazy bums, I added<span class="highlight">click</span>and<span class="highlight">hover</span>actions to peel this page on its own.</li>
     <li>You can only add 1 and only 1 peel per page. For the sake of the sanity of the author of the original plugin and myself, dont go crazy peeeeling everything.</li>
   </ul>
@@ -49,15 +46,15 @@
       <pre>
 $(document).ready(function(){
   $('#target').fold({
-    side:'bottom-left', //['top-left','top-right','bottom-left','bottom-right] Default: 'top-left'
-    action:'click',    // ['click','hover'] Default : 'drag'
+    side:'bottom-left', // ['top-left','top-right','bottom-left','bottom-right] Default: 'top-left'
+    action:'click',     // ['click','hover'] Default : 'drag'
     startingWidth:40,   // starting width and height of the peel over image
-    startingHeight:40   // default: 100px
-    stick:true      // the peel now sticks and doesnt go out of the viewport when the page is scrolled
+    startingHeight:40,  // default: 100px
+    stick:true          // the peel now sticks and doesnt go out of the viewport when the page is scrolled
   });
 });</pre>
-    All above configurations are optional. So if you dont want, you can spin it as simply as this:
-          <pre>
+    All above configurations are optional. So if you dont want, you can toll it in as simply as :
+    <pre>
 $(document).ready(function(){
   $('#target').fold();
 });</pre>
@@ -68,8 +65,8 @@ $(document).ready(function(){
     <li> Which make of the <span class="highlight">JQuery</span> sauce ?
       <p>Grab the latest available. The newer the better!</p>
     </li>
-    <li> Where to put the base element ?      
-      <p>The plugin wraps the element to peel with an <span class="highlight">absolute</span> positioned element. So it will take the corner of the <a  href="http://www.quirksmode.org/css/position.html"><span class="focus">containing block</a></span>.</p>
+    <li> Where to put the target element ?      
+      <p>The plugin wraps the element to peel with an <span class="highlight">absolute</span> positioned element. So it will take the corner of its <a  href="http://www.quirksmode.org/css/position.html"><span class="focus">containing block</a></span>.</p>
     </li>
   </ul>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>

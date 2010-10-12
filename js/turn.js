@@ -16,7 +16,7 @@
     var defaults = {
       side: 'top-left',       // 'top-right','bottom-right','bottom-left'
       turnImage: 'images/fold.png',  // The triangle-shaped fold image
-      maxHeight: 400,     // The maximum height. Duh.
+      maxHeight: 300,     // The maximum height to peel.
       startingWidth: 100,   // The height and width
       startingHeight: 100   // with which to start (these should probably be camelCase, d'oh.)
     };
@@ -40,7 +40,7 @@
       height: options.startingHeight
     });
 
-    //check if floating peel required
+    //check if peel should stick
     if( options.stick ){
       turn_wrapper.css('position','fixed');
     }
