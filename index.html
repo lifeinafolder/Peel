@@ -7,12 +7,12 @@
   <link rel="stylesheet" href="css/default.css">
 </head>
 <body>
-  <img id="target" src="images/code.png" style="position:absolute;bottom:0;"/>
+  <img id="target" src="images/code.png"/>
   <h1>Peel this page! You heard me, peel it, just like an orange</h1>
   <h2>The inside truth:</h2>
   <ul>
     <li>This is a <span class="highlight">JQuery</span> Plugin. Nuff Said!</li>
-    <li>Have you seen <span class="highlight">JQuery UI</span> ? Its awesome and this plugin is awesome. <span class="focus">We go in pairs</span>.</li>
+    <li>Have you seen <a href="http://jqueryui.com/"><span class="highlight">JQuery UI</span></a> ? Its awesome and this plugin is awesome. <span class="focus">We go in pairs</span>.</li>
     <li>Its inspired/based upon the super <a href="http://elliottkember.com/sexy_curls.html">sexy curl</a> plugin by <a href="http://twitter.com/elliottkember">Elliott Kember</a></li>
     <li>The original plugin did not allow moving the peel effect to corners like the "bottom-left" and "bottom-right". This one does!</li>
     <li>
@@ -24,8 +24,9 @@
   </ul>
   <h2>Receipe</h2>
   <ul>
-    <li>First, take a HTML container with a target element like:
-    
+    <li>First, take a HTML vessel with a target element like:
+      <pre>&lt;img id=&quot;target&quot; src=&quot;images/code.png&quot; /&gt;</pre>
+      This is the element which will be exposed by the peel and guess what, It doesnt necessarily have to be an image!
     </li>
     <li> Add some JQuery and the JQuery UI :
       <pre>&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js&quot;&gt;&lt;/script&gt;
@@ -53,6 +54,11 @@ $(document).ready(function(){
     stick:true      // the peel now sticks and doesnt go out of the viewport when the page is scrolled
   });
 });</pre>
+    All above configurations are optional. So if you dont want, you can spin it as simply as this:
+          <pre>
+$(document).ready(function(){
+  $('#target').fold();
+});</pre>
     </li>
   </ul>
   <h2>Any doubts ?</h2>
@@ -76,9 +82,9 @@ $(document).ready(function(){
     prettyPrint();
     
     $('#target').fold({
-      side:'bottom-right',
+      side:'top-right',
       action:'click',
-      floating:true
+      stick:true
     });
   });
   </script>

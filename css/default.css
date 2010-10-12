@@ -2,6 +2,7 @@ body{
   margin:0;
   padding:10px;
   font-family: Arial,Verdana,Helvetica,sans-serif;
+  position:relative;
 }
 
 h1{
@@ -29,6 +30,10 @@ pre.prettyprint{
   color:#600101;
   padding:5px;
   font-size:1.1em;
+}
+
+a{
+  text-decoration:none;
 }
 
 .highlight:before{
