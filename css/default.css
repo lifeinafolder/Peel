@@ -24,3 +24,27 @@ pre.prettyprint{
   background:#EEE;
   padding:10px;
 }
+
+.highlight{
+  color:#600101;
+  padding:5px;
+  font-size:1.1em;
+}
+
+.highlight:before{
+  content:'{';
+  color:#600101;
+  font-size:1.2em;
+}
+
+.highlight:after{
+  content:'}';
+  color:#600101;
+  font-size:1.2em;
+}
+
+.focus{
+  border-top:3px solid #600101;
+  border-bottom:3px solid #600101;
+  padding:5px;
+}
