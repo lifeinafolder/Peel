@@ -9,6 +9,7 @@
 <body>
   <img id="target" src="images/code.png"/>
   <h1>Peel this page! You heard me, peel it, just like an orange</h1>
+  <p><a href="#" class="download">Download Now</a></p>
   <h2>The inside truth:</h2>
   <ul>
     <li>This is a <span class="highlight">JQuery</span> Plugin. Nuff Said!</li>
@@ -42,6 +43,7 @@
     <pre>
 &lt;script src=&quot;js/turn.js&quot;&gt;&lt;/script&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;css/turn.css&quot;&gt;</pre>
+    Make sure you have the images folder downloaded with the <span class="focus">fold.png</span> image.
     </li>
     <li> Finally, heat it once the pan is ready
       <pre>
@@ -67,7 +69,7 @@ $(document).ready(function(){
       <p>Grab the latest available. The newer the better!</p>
     </li>
     <li> Where to put the base element ?      
-      <p>The plugin wraps the element to peel with an "absolute" positioned element. So it will take a corner as per the closest ancestor which is "absolute" or "relative" positioned.</p>
+      <p>The plugin wraps the element to peel with an <span class="highlight">absolute</span> positioned element. So it will take the corner of the <a  href="http://www.quirksmode.org/css/position.html"><span class="focus">containing block</a></span>.</p>
     </li>
   </ul>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>

@@ -36,6 +36,19 @@ a{
   text-decoration:none;
 }
 
+h1 + p{
+  text-align:center;
+}
+
+.download{
+  -moz-border-radius:15px 15px 15px 15px;
+  background:none repeat scroll 0 0 #08B0E8;
+  color:white;
+  font-size:1.2em;
+  padding:10px;
+  text-shadow:1px 2px #A2A3A3;
+}
+
 .highlight:before{
   content:'{';
   color:#600101;
