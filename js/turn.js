@@ -1,6 +1,9 @@
 /**
  * Enhancing 'The Sexy Curls JQuery Plugin' by Elliott Kember - http://twitter.com/elliottkember
  * @author - Rajat Mittal http://lifeinafolder.com
+ * Released under the MIT license (license.txt)
+ * Copyright (c) 2010 ICRL
+ * See the file license.txt for copying permission.
  */
 
 (function($){
