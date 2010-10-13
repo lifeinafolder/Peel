@@ -3,6 +3,8 @@ body{
   padding:10px;
   font-family: Arial,Verdana,Helvetica,sans-serif;
   position:relative;
+  background:url("../images/fresh-orange.gif") no-repeat #fefefe;
+  background-position: 90% 0px;
 }
 
 h1{
@@ -48,6 +50,10 @@ h1 + p{
   font-size:1.2em;
   padding:10px;
   text-shadow:1px 2px 3px #535454;
+}
+
+.note{
+  color:red;
 }
 
 .highlight:before{

@@ -14,7 +14,7 @@
   <ul>
     <li>This is a <span class="highlight">JQuery</span> Plugin. Nuff Said!</li>
     <li>Have you seen <a href="http://jqueryui.com/"><span class="highlight">JQuery UI</span></a> ? Its awesome and this plugin is awesome. <span class="focus">We go in pairs</span>.</li>
-    <li>Its inspired/based upon the super <a href="http://elliottkember.com/sexy_curls.html">sexy curl</a> plugin by <a href="http://twitter.com/elliottkember">Elliott Kember</a></li>
+    <li>Its inspired/based upon the super <a href="http://elliottkember.com/sexy_curls.html"><span class="highlight">sexy curl</span></a> plugin by <a href="http://twitter.com/elliottkember"><span class="focus">Elliott Kember</span></a></li>
     <li>The original plugin did not allow moving the peel effect to corners like the "bottom-left" and "bottom-right". This one does!</li>
     <li>It uses the wonderful <a href="https://developer.mozilla.org/en/CSS/-moz-transform"><span class="highlight">CSS3 Transform : Rotate</span></a>. Hence, it requires just one image and doesn't like your old browsers.</li>
     <li>For all you lazy bums, I added<span class="highlight">click</span>and<span class="highlight">hover</span>actions to peel this page on its own.</li>
@@ -24,13 +24,14 @@
   <ul>
     <li>First, take a HTML vessel with a target element like:
       <pre>&lt;img id=&quot;target&quot; src=&quot;images/code.png&quot; /&gt;</pre>
-      This is the element which will be exposed by the peel and guess what, It doesnt necessarily have to be an image!
+      This is the element which will be exposed by the peel and guess what, It doesn't have to be an image!
     </li>
     <li> Add some JQuery and the JQuery UI :
       <pre>&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;!window.jQuery &amp;&amp; document.write('&lt;script src=&quot;js/jquery-1.4.2.min.js&quot;&gt;&lt;\/script&gt;')&lt;/script&gt;
 &lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;!window.jQuery.ui &amp;&amp; document.write('&lt;script src=&quot;js/jquery-ui-1.8.5.custom.min.js&quot;&gt;&lt;\/script&gt;')&lt;/script&gt;</pre>
+  Mad props to <a href="http://html5boilerplate.com/"><span class="highlight">Boilerplate</span></a> to show this awesome way to inject Jquery.
     </li>
     <li>To make JQuery UI edible, put some JQuery UI theme sauce :
     <pre>
@@ -66,7 +67,8 @@ $(document).ready(function(){
       <p>Grab the latest available. The newer the better!</p>
     </li>
     <li> Where to put the target element ?      
-      <p>The plugin wraps the element to peel with an <span class="highlight">absolute</span> positioned element. So it will take the corner of its <a  href="http://www.quirksmode.org/css/position.html"><span class="focus">containing block</a></span>.</p>
+      <p>The plugin wraps the element to peel with an <span class="highlight">absolute</span> positioned element. So it will take the corner of the <a  href="http://www.quirksmode.org/css/position.html"><span class="focus">containing block</a></span> of the target element.</p>
+      <p class="note">If your element is directly under the BODY tag and you want to position it at the <span class="highlight">bottom-left</span>or <span class="highlight">bottom-right</span>, make sure to have a <span class="focus">position:relative</span> on either your BODY tag or HTML tag else, it goes on the bottom of the window and not on the bottom of the page.</p>
     </li>
   </ul>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
